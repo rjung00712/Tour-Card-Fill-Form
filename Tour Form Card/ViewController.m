@@ -7,8 +7,10 @@
 //
 
 #import "ViewController.h"
+#import "NewViewController.h"
 
 @interface ViewController ()
+@property (weak, nonatomic) IBOutlet UIView *viewToBeConverted;
 
 @end
 
@@ -23,6 +25,23 @@
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (UIImage *)imageWithView:(UIView *) view {
+    
+    UIGraphicsBeginImageContextWithOptions(view.bounds.size, view.opaque, 0.0);
+    
+    [view.layer renderInContext:UIGraphicsGetCurrentContext()];
+    
+    UIImage *img = UIGraphicsGetImageFromCurrentImageContext();
+    
+    UIGraphicsEndImageContext();
+    
+    return img;
+}
+
+- (IBAction)convertUIView:(id)sender {
+    
 }
 
 

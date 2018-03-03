@@ -13,6 +13,7 @@
 		79834C5F204A0DE600E77BF5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 79834C5E204A0DE600E77BF5 /* Assets.xcassets */; };
 		79834C62204A0DE600E77BF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79834C60204A0DE600E77BF5 /* LaunchScreen.storyboard */; };
 		79834C65204A0DE600E77BF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79834C64204A0DE600E77BF5 /* main.m */; };
+		79834C6D204A127B00E77BF5 /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79834C6C204A127B00E77BF5 /* NewViewController.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,8 @@
 		79834C61204A0DE600E77BF5 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		79834C63204A0DE600E77BF5 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		79834C64204A0DE600E77BF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		79834C6B204A127B00E77BF5 /* NewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
+		79834C6C204A127B00E77BF5 /* NewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -62,6 +65,8 @@
 				79834C56204A0DE600E77BF5 /* AppDelegate.m */,
 				79834C58204A0DE600E77BF5 /* ViewController.h */,
 				79834C59204A0DE600E77BF5 /* ViewController.m */,
+				79834C6B204A127B00E77BF5 /* NewViewController.h */,
+				79834C6C204A127B00E77BF5 /* NewViewController.m */,
 				79834C5B204A0DE600E77BF5 /* Main.storyboard */,
 				79834C5E204A0DE600E77BF5 /* Assets.xcassets */,
 				79834C60204A0DE600E77BF5 /* LaunchScreen.storyboard */,
@@ -143,6 +148,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				79834C5A204A0DE600E77BF5 /* ViewController.m in Sources */,
+				79834C6D204A127B00E77BF5 /* NewViewController.m in Sources */,
 				79834C65204A0DE600E77BF5 /* main.m in Sources */,
 				79834C57204A0DE600E77BF5 /* AppDelegate.m in Sources */,
 			);
