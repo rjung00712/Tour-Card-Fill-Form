@@ -10,7 +10,8 @@
 #import "NewViewController.h"
 
 @interface ViewController ()
-@property (weak, nonatomic) IBOutlet UIView *viewToBeConverted;
+@property (strong, nonatomic) IBOutlet UIView *viewToBeConverted;
+
 
 @end
 
@@ -41,7 +42,11 @@
 }
 
 - (IBAction)convertUIView:(id)sender {
+    NewViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"NewViewController"];
     
+    vc.imageFromFirstView = [self imageWithView:self.viewToBeConverted];
+    
+    [self presentViewController:vc animated:YES completion:nil];
 }
 
 
