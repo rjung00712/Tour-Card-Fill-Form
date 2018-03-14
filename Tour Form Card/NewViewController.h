@@ -11,7 +11,5 @@
 //#import <MessageUI/MFMailComposeViewController.h>
 
 @interface NewViewController : UIViewController<MFMailComposeViewControllerDelegate>
-
 @property (strong, nonatomic) UIImage *imageFromFirstView;
-
 @end

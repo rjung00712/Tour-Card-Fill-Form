@@ -10,7 +10,6 @@
 
 @interface NewViewController ()
 @property (weak, nonatomic) IBOutlet UIImageView *imageView;
-
 @end
 
 @implementation NewViewController
@@ -20,7 +19,6 @@
     // Do any additional setup after loading the view.
     
     self.imageView.image = self.imageFromFirstView;
-
 }
 
 - (void)didReceiveMemoryWarning {
@@ -28,8 +26,18 @@
     // Dispose of any resources that can be recreated.
 }
 
+- (void)viewDidAppear:(BOOL)animated {
+    [self addAlertView];
+}
+
+-(void)addAlertView {
+    UIAlertController *alertController = [UIAlertController alertControllerWithTitle:@"Title" message:@"Message" preferredStyle:UIAlertControllerStyleAlert];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"OK" style:UIAlertActionStyleDefault handler:nil]];
+    [alertController addAction:[UIAlertAction actionWithTitle:@"NOT OKAY" style:UIAlertActionStyleDefault handler:nil]];
+    [self presentViewController:alertController animated:YES completion:nil];
+}
+
 - (IBAction)openEmailInterface:(id)sender {
-    
     if (![MFMailComposeViewController canSendMail]) {
         NSLog(@"Mail services are not available.");
         return;
@@ -79,19 +87,6 @@
 
     // Close the Mail Interface
     [self dismissViewControllerAnimated:YES completion:nil];
-    
 }
-
-
-
-/*
-#pragma mark - Navigation
-
-// In a storyboard-based application, you will often want to do a little preparation before navigation
-- (void)prepareForSegue:(UIStoryboardSegue *)segue sender:(id)sender {
-    // Get the new view controller using [segue destinationViewController].
-    // Pass the selected object to the new view controller.
-}
-*/
 
 @end
