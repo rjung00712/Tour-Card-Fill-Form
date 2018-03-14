@@ -9,9 +9,12 @@
 #import "ViewController.h"
 #import "NewViewController.h"
 
+
+
 @interface ViewController ()
 @property (strong, nonatomic) IBOutlet UIView *viewToBeConverted;
 
+@property (weak, nonatomic) IBOutlet UIImageView *imageView;
 
 @end
 
@@ -22,10 +25,13 @@
     // Do any additional setup after loading the view, typically from a nib.
 }
 
-
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
     // Dispose of any resources that can be recreated.
+}
+
+- (void)viewDidAppear:(BOOL)animated {
+    
 }
 
 - (UIImage *)imageWithView:(UIView *) view {
@@ -42,12 +48,18 @@
 }
 
 - (IBAction)convertUIView:(id)sender {
-    NewViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"NewViewController"];
+//    NewViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"NewViewController"];
+//    vc.imageFromFirstView = [self imageWithView:self.viewToBeConverted];
     
-    vc.imageFromFirstView = [self imageWithView:self.viewToBeConverted];
+    self.imageView.image = [self imageWithView:self.viewToBeConverted];
     
-    [self presentViewController:vc animated:YES completion:nil];
+//    [self presentViewController:vc animated:YES completion:nil];
+    
 }
+
+//if ([MFMailComposeViewController canSendMail]){
+//
+//}
 
 
 @end

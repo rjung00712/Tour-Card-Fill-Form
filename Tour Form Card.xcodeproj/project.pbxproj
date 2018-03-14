@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		79515CDF2056EFBA00F22184 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79515CDE2056EFB900F22184 /* MessageUI.framework */; };
+		79515CE12056EFEB00F22184 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79515CE02056EFEB00F22184 /* UIKit.framework */; };
+		79515CE32056F00E00F22184 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79515CE22056F00E00F22184 /* CoreGraphics.framework */; };
+		79515CE52056F01B00F22184 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79515CE42056F01B00F22184 /* Foundation.framework */; };
 		79834C57204A0DE600E77BF5 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 79834C56204A0DE600E77BF5 /* AppDelegate.m */; };
 		79834C5A204A0DE600E77BF5 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79834C59204A0DE600E77BF5 /* ViewController.m */; };
 		79834C5D204A0DE600E77BF5 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79834C5B204A0DE600E77BF5 /* Main.storyboard */; };
@@ -17,6 +21,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		79515CDE2056EFB900F22184 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		79515CE02056EFEB00F22184 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
+		79515CE22056F00E00F22184 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
+		79515CE42056F01B00F22184 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = System/Library/Frameworks/Foundation.framework; sourceTree = SDKROOT; };
 		79834C52204A0DE600E77BF5 /* Tour Form Card.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Tour Form Card.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		79834C55204A0DE600E77BF5 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		79834C56204A0DE600E77BF5 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -36,17 +44,33 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79515CE52056F01B00F22184 /* Foundation.framework in Frameworks */,
+				79515CE32056F00E00F22184 /* CoreGraphics.framework in Frameworks */,
+				79515CE12056EFEB00F22184 /* UIKit.framework in Frameworks */,
+				79515CDF2056EFBA00F22184 /* MessageUI.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		79515CDD2056EFB900F22184 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				79515CE42056F01B00F22184 /* Foundation.framework */,
+				79515CE22056F00E00F22184 /* CoreGraphics.framework */,
+				79515CE02056EFEB00F22184 /* UIKit.framework */,
+				79515CDE2056EFB900F22184 /* MessageUI.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		79834C49204A0DE600E77BF5 = {
 			isa = PBXGroup;
 			children = (
 				79834C54204A0DE600E77BF5 /* Tour Form Card */,
 				79834C53204A0DE600E77BF5 /* Products */,
+				79515CDD2056EFB900F22184 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -205,7 +229,9 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_ENTITLEMENTS[sdk=*]" = "";
+				CODE_SIGN_IDENTITY = "iPhone Developer: freelikeabird@icloud.com (958C2WA2T9)";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
@@ -224,10 +250,12 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = YES;
+				NEW_SETTING = "";
+				NEW_SETTING1 = "";
 				ONLY_ACTIVE_ARCH = YES;
-				SDKROOT = iphoneos;
+				SDKROOT = iphoneos11.2;
 			};
 			name = Debug;
 		};
@@ -260,7 +288,8 @@
 				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
 				CLANG_WARN_UNREACHABLE_CODE = YES;
 				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
-				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_IDENTITY = "iPhone Developer: freelikeabird@icloud.com (958C2WA2T9)";
+				CODE_SIGN_STYLE = Automatic;
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
@@ -273,9 +302,11 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 11.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
 				MTL_ENABLE_DEBUG_INFO = NO;
-				SDKROOT = iphoneos;
+				NEW_SETTING = "";
+				NEW_SETTING1 = "";
+				SDKROOT = iphoneos11.2;
 				VALIDATE_PRODUCT = YES;
 			};
 			name = Release;
@@ -284,7 +315,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7W5M7D7CUF;
 				INFOPLIST_FILE = "Tour Form Card/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Richard-Chong.Tour-Form-Card";
@@ -297,7 +330,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
+				DEVELOPMENT_TEAM = 7W5M7D7CUF;
 				INFOPLIST_FILE = "Tour Form Card/Info.plist";
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = "Richard-Chong.Tour-Form-Card";
