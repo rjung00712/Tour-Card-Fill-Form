@@ -18,6 +18,11 @@
 		79834C62204A0DE600E77BF5 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 79834C60204A0DE600E77BF5 /* LaunchScreen.storyboard */; };
 		79834C65204A0DE600E77BF5 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 79834C64204A0DE600E77BF5 /* main.m */; };
 		79834C76204A2BA000E77BF5 /* NewViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 79834C75204A2BA000E77BF5 /* NewViewController.m */; };
+		79ECD0242059F6C9006F90E8 /* FormCard.png in Resources */ = {isa = PBXBuildFile; fileRef = 79ECD0232059F6C9006F90E8 /* FormCard.png */; };
+		79ECD027205A2BB8006F90E8 /* FormCard_Middle.png in Resources */ = {isa = PBXBuildFile; fileRef = 79ECD025205A2BB8006F90E8 /* FormCard_Middle.png */; };
+		79ECD028205A2BB8006F90E8 /* FormCard_Bottom.png in Resources */ = {isa = PBXBuildFile; fileRef = 79ECD026205A2BB8006F90E8 /* FormCard_Bottom.png */; };
+		79ECD02A205A2D1B006F90E8 /* FormCard_Top.png in Resources */ = {isa = PBXBuildFile; fileRef = 79ECD029205A2D1B006F90E8 /* FormCard_Top.png */; };
+		79ECD02C205A303E006F90E8 /* FormCard_Text.png in Resources */ = {isa = PBXBuildFile; fileRef = 79ECD02B205A303E006F90E8 /* FormCard_Text.png */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +42,11 @@
 		79834C64204A0DE600E77BF5 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		79834C74204A2BA000E77BF5 /* NewViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = NewViewController.h; sourceTree = "<group>"; };
 		79834C75204A2BA000E77BF5 /* NewViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = NewViewController.m; sourceTree = "<group>"; };
+		79ECD0232059F6C9006F90E8 /* FormCard.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FormCard.png; path = "Tour Form Card/FormCard.png"; sourceTree = "<group>"; };
+		79ECD025205A2BB8006F90E8 /* FormCard_Middle.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FormCard_Middle.png; path = "Tour Form Card/FormCard_Middle.png"; sourceTree = "<group>"; };
+		79ECD026205A2BB8006F90E8 /* FormCard_Bottom.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FormCard_Bottom.png; path = "Tour Form Card/FormCard_Bottom.png"; sourceTree = "<group>"; };
+		79ECD029205A2D1B006F90E8 /* FormCard_Top.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FormCard_Top.png; path = "Tour Form Card/FormCard_Top.png"; sourceTree = "<group>"; };
+		79ECD02B205A303E006F90E8 /* FormCard_Text.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = FormCard_Text.png; path = "Tour Form Card/FormCard_Text.png"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +80,11 @@
 			children = (
 				79834C54204A0DE600E77BF5 /* Tour Form Card */,
 				79834C53204A0DE600E77BF5 /* Products */,
+				79ECD02B205A303E006F90E8 /* FormCard_Text.png */,
+				79ECD029205A2D1B006F90E8 /* FormCard_Top.png */,
+				79ECD026205A2BB8006F90E8 /* FormCard_Bottom.png */,
+				79ECD025205A2BB8006F90E8 /* FormCard_Middle.png */,
+				79ECD0232059F6C9006F90E8 /* FormCard.png */,
 				79515CDD2056EFB900F22184 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -158,9 +173,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				79ECD028205A2BB8006F90E8 /* FormCard_Bottom.png in Resources */,
 				79834C62204A0DE600E77BF5 /* LaunchScreen.storyboard in Resources */,
+				79ECD0242059F6C9006F90E8 /* FormCard.png in Resources */,
 				79834C5F204A0DE600E77BF5 /* Assets.xcassets in Resources */,
+				79ECD02A205A2D1B006F90E8 /* FormCard_Top.png in Resources */,
 				79834C5D204A0DE600E77BF5 /* Main.storyboard in Resources */,
+				79ECD02C205A303E006F90E8 /* FormCard_Text.png in Resources */,
+				79ECD027205A2BB8006F90E8 /* FormCard_Middle.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
