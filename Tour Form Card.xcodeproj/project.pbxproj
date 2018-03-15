@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		790337A1205AEEF7002C3E8F /* Check_mark_2.png in Resources */ = {isa = PBXBuildFile; fileRef = 790337A0205AEEF6002C3E8F /* Check_mark_2.png */; };
+		790337A5205AEFB0002C3E8F /* Black_check.png in Resources */ = {isa = PBXBuildFile; fileRef = 790337A4205AEFB0002C3E8F /* Black_check.png */; };
 		79515CDF2056EFBA00F22184 /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79515CDE2056EFB900F22184 /* MessageUI.framework */; };
 		79515CE12056EFEB00F22184 /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79515CE02056EFEB00F22184 /* UIKit.framework */; };
 		79515CE32056F00E00F22184 /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 79515CE22056F00E00F22184 /* CoreGraphics.framework */; };
@@ -26,6 +28,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		790337A0205AEEF6002C3E8F /* Check_mark_2.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Check_mark_2.png; path = "Tour Form Card/Check_mark_2.png"; sourceTree = "<group>"; };
+		790337A4205AEFB0002C3E8F /* Black_check.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Black_check.png; path = "Tour Form Card/Black_check.png"; sourceTree = "<group>"; };
 		79515CDE2056EFB900F22184 /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
 		79515CE02056EFEB00F22184 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = System/Library/Frameworks/UIKit.framework; sourceTree = SDKROOT; };
 		79515CE22056F00E00F22184 /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
@@ -85,6 +89,8 @@
 				79ECD026205A2BB8006F90E8 /* FormCard_Bottom.png */,
 				79ECD025205A2BB8006F90E8 /* FormCard_Middle.png */,
 				79ECD0232059F6C9006F90E8 /* FormCard.png */,
+				790337A0205AEEF6002C3E8F /* Check_mark_2.png */,
+				790337A4205AEFB0002C3E8F /* Black_check.png */,
 				79515CDD2056EFB900F22184 /* Frameworks */,
 			);
 			sourceTree = "<group>";
@@ -174,10 +180,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				79ECD028205A2BB8006F90E8 /* FormCard_Bottom.png in Resources */,
+				790337A1205AEEF7002C3E8F /* Check_mark_2.png in Resources */,
 				79834C62204A0DE600E77BF5 /* LaunchScreen.storyboard in Resources */,
 				79ECD0242059F6C9006F90E8 /* FormCard.png in Resources */,
 				79834C5F204A0DE600E77BF5 /* Assets.xcassets in Resources */,
 				79ECD02A205A2D1B006F90E8 /* FormCard_Top.png in Resources */,
+				790337A5205AEFB0002C3E8F /* Black_check.png in Resources */,
 				79834C5D204A0DE600E77BF5 /* Main.storyboard in Resources */,
 				79ECD02C205A303E006F90E8 /* FormCard_Text.png in Resources */,
 				79ECD027205A2BB8006F90E8 /* FormCard_Middle.png in Resources */,
