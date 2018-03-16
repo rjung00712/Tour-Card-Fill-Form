@@ -15,6 +15,10 @@
     BOOL checked2;
     BOOL checked3;
     NSString *buttonImage;
+    NSString *file;
+    NSString *emailSubject;
+    NSString *emailRecipient;
+    NSString *emailBody;
 }
 
 

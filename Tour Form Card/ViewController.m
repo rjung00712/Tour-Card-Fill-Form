@@ -26,6 +26,10 @@
     checked2 = NO;
     checked3 = NO;
     buttonImage = @"Black_check.png";
+    file = @"Tour Card.png";
+    emailSubject = @"Tour Card";
+    emailRecipient = @"acpoints@gmail.com";
+    emailBody = @"Hi Jay,\nHere is my information and preferences. Hope to hear from you soon!";
 }
 
 - (void)didReceiveMemoryWarning {
@@ -44,10 +48,62 @@
 }
 
 - (IBAction)convertUIView:(id)sender {
-    NewViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"NewViewController"];
-    vc.imageFromFirstView = [self imageWithView:self.viewToBeConverted];
+//    NewViewController *vc = [self.storyboard instantiateViewControllerWithIdentifier:@"NewViewController"];
+//    vc.imageFromFirstView = [self imageWithView:self.viewToBeConverted];
+//    [self presentViewController:vc animated:YES completion:nil];
 
-    [self presentViewController:vc animated:YES completion:nil];
+    UIImage *imageFromFirstView = [self imageWithView:self.viewToBeConverted];
+    UIImageView *imageView = [[UIImageView alloc] initWithImage:imageFromFirstView];
+    
+    if (![MFMailComposeViewController canSendMail]) {
+        NSLog(@"Mail services are not available.");
+        return;
+    } else {
+        // construct mail compose view controller
+        MFMailComposeViewController *mailComposer = [[MFMailComposeViewController alloc] init];
+        mailComposer.mailComposeDelegate = self;
+        
+        //picker.mailComposeDelegate = vc;
+        [mailComposer setSubject:emailSubject];
+        [mailComposer setToRecipients:@[emailRecipient]];
+        
+        NSData *attachment = UIImagePNGRepresentation(imageView.image);
+        
+        [mailComposer addAttachmentData:attachment mimeType:@"image/png" fileName:file];
+        
+        // Fill out the email body text
+        NSString *emailBody = emailBody;
+        [mailComposer setMessageBody:emailBody isHTML:NO];
+        [self presentViewController:mailComposer animated:YES completion:nil];
+    }
+}
+
+//// The mail compose view controller delegate method
+//- (void)mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:
+//    (MFMailComposeResult)result error:(NSError *)error {
+//    [self dismissViewControllerAnimated:NO completion:nil];
+//}
+
+- (void) mailComposeController:(MFMailComposeViewController *)controller didFinishWithResult:(MFMailComposeResult)result error:(NSError *)error {
+    switch (result) {
+        case MFMailComposeResultCancelled:
+            NSLog(@"Mail cancelled");
+            break;
+        case MFMailComposeResultSaved:
+            NSLog(@"Mail saved");
+            break;
+        case MFMailComposeResultSent:
+            NSLog(@"Mail sent");
+            break;
+        case MFMailComposeResultFailed:
+            NSLog(@"Mail sent failure: %@", [error localizedDescription]);
+            break;
+        default:
+            break;
+    }
+    
+    // Close the Mail Interface
+    [self dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (IBAction)clickedCheckButton:(id)sender {
@@ -93,39 +149,5 @@
         default:
             break;
     }
-    
-    
-//    if (button.tag == 0) {
-//        if (!checked0) {
-//            [self.checkButton_0 setImage:[UIImage imageNamed:buttonImage] forState:UIControlStateNormal];
-//            checked0 = YES;
-//        } else {
-//            [self.checkButton_0 setImage:nil forState:UIControlStateNormal];
-//            checked0 = NO;
-//        }
-//    } else if (button.tag == 1) {
-//        if (!checked1) {
-//            [self.checkButton_1 setImage:[UIImage imageNamed:buttonImage] forState:UIControlStateNormal];
-//            checked1 = YES;
-//        } else {
-//            [self.checkButton_1 setImage:nil forState:UIControlStateNormal];
-//            checked = NO;
-//
-//            NSLog(@"1 un-clicked");
-//        }
-//
-//    }
-    
-//    if (!checked) {
-//        [self.checkButton_0 setImage:[UIImage imageNamed:@"Black_check.png"] forState:UIControlStateNormal];
-//        checked = YES;
-//
-//        NSLog(@"clicked");
-//    } else {
-//        [self.checkButton_0 setImage:nil forState:UIControlStateNormal];
-//        checked = NO;
-//
-//        NSLog(@"un-clicked");
-//    }
 }
 @end
